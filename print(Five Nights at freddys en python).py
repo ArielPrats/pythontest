@@ -64,7 +64,7 @@ while noche==3:
     noche=30
 
 while noche==4:
-    AI==range(1,20)
+    AI==random.randint(1,20)
     AI2==5
     AI3==6
     AI4==8
