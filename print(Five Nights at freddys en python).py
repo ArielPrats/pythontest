@@ -166,3 +166,184 @@ while noche==70:
 print("12:00AM")
 print (" ")
 
+XD=int
+mov1=int
+mov2=int
+mov3=int
+mov4=int
+num=int
+
+while XD==60 or mov1==17 or mov2==15 or mov3==13 or mov4==11:
+    
+    while XD==1:
+        print("12:00 AM")
+        XD=XD+1
+
+    while XD==10:
+        print("1:00 AM")
+        XD=XD+1
+
+    while XD==20:
+        print("2:00 AM")
+        XD=XD+1
+
+    while XD==30:
+        print("3:00 AM")
+        XD=XD+1
+
+    while XD==40:
+        print("4:00AM")
+        XD=XD+1
+
+    while XD==50:
+        print("5:00AM")
+        XD=XD+1
+
+    XD=XD+1
+
+    pila=int
+    cam=int
+
+    if pila<1:
+        print("se te acabo la bateria")
+        print("FREDDY: HOG HOG HOG HOG HOG")
+        mov1=17
+    else:
+        print("bateria ",pila,"%")
+
+    num=random.randint(1,20)
+
+    if AI==num or AI>num:
+        mov=mov+1
+    else:
+        print("-FREDDY")
+
+    while mov1==1 and cam==2:
+        print("-FREDDY")
+        mov1=mov1+1
+
+    while mov1==1 and cam==1:
+        print("-FREDDY esta en el esenario")
+        mov1=mov1+1
+
+    while mov1==3 and cam==2:
+        print("-FREDDY")
+        mov1=mov1+1
+
+    while mov1==3 and cam==1:
+        print("-FREDDY esta en el comedor")
+        mov1=mov1+1
+
+    while mov1==5 and cam==2:
+        print("-FREDDY")
+        mov1=mov1+1
+
+    while mov1==5 and cam==1:
+        print("-FREDDY esta en el baño")
+        mov1=mov1+1    
+
+    while mov1==7 and cam==2:
+        print("-FREDDY")
+        mov1=mov1+1
+
+    while mov1==7 and cam==1:
+        print("-FREDDY esta llendo a la cosina")
+        mov1=mov1+1    
+
+    while mov1==9 and cam==2:
+        print("-FREDDY")
+        mov1=mov1+1
+
+    while mov1==9 and cam==1:
+        print("-FREDDY esta en la cosina")
+        mov1=mov1+1    
+
+    while mov1==11 and cam==2:
+        print("-FREDDY")
+        mov1=mov1+1
+
+    while mov1==11 and cam==1:
+        print("-FREDDY esta llendo al pasillo")
+        mov1=mov1+1    
+
+    while mov1==13 and cam==2:
+        print("-FREDDY")
+        mov1=mov1+1
+
+    while mov1==13 and cam==1:
+        print("-FREDDY esta en pasillo")
+        mov1=mov1+1    
+
+    while mov1==15 and cam==2:
+        print("-FREDDY")
+        mov1=mov1+1
+
+    while mov1==15 and cam==1:
+        print("-FREDDY esta en la puerta")
+        mov1=mov1+1    
+
+
+    num2=random.randint(1,20)
+
+    if AI2==num2 or AI2>num2:
+        mov2=mov2+1
+    else:
+        print("-BONNIE")
+
+    while mov2==1 and cam==2:
+        print("-BONNIE")
+        mov2=mov2+1
+
+    while mov2==1 and cam==1:
+        print("BONNIE esta en el esenario")
+        mov2=mov2+1
+
+    while mov2==3 and cam==2:
+        print("-BONNIE")
+        mov2=mov2+1
+
+    while mov2==3 and cam==1:
+        print("BONNIE esta en el comedor")
+        mov2=mov2+1
+
+    while mov2==5 and cam==2:
+        print("-BONNIE")
+        mov2=mov2+1
+
+    while mov2==5 and cam==1:
+        print("BONNIE esta en partes y servicios")
+        mov2=mov2+1
+
+    while mov2==7 and cam==2:
+        print("-BONNIE")
+        mov2=mov2+1
+
+    while mov2==7 and cam==1:
+        print("BONNIE esta llendo al pasillo")
+        mov2=mov2+1
+    
+    while mov2==9 and cam==2:
+        print("-BONNIE")
+        mov2=mov2+1
+
+    while mov2==9 and cam==1:
+        print("BONNIE esta en el pasillo")
+        mov2=mov2+1
+
+    while mov2==11 and cam==2:
+        print("-BONNIE")
+        mov2=mov2+1
+
+    while mov2==11 and cam==1:
+        print("BONNIE esta en el closed de aseo")
+        mov2=mov2+1
+
+    while mov2==13 and cam==2:
+        print("-BONNIE")
+        mov2=mov2+1
+
+    while mov2==13 and cam==1:
+        print("BONNIE esta en la puerta")
+        mov2=mov2+1
+
+    
