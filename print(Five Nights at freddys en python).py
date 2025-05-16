@@ -18,6 +18,7 @@ while inicio!=1987:
 
 print("Elija su noche")
 
+
 print('''
 -noche(1)
 -noche(2)
