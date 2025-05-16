@@ -171,31 +171,30 @@ num=0
 
 while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
     
-    while XD==1:
+    if XD==1:
         print("12:00 AM")
         XD=XD+1
 
-    while XD==10:
+    if XD==10:
         print("1:00 AM")
         XD=XD+1
 
-    while XD==20:
+    if XD==20:
         print("2:00 AM")
         XD=XD+1
 
-    while XD==30:
+    if XD==30:
         print("3:00 AM")
         XD=XD+1
 
-    while XD==40:
+    if XD==40:
         print("4:00AM")
         XD=XD+1
 
-    while XD==50:
+    if XD==50:
         print("5:00AM")
         XD=XD+1
 
-    XD=0
     XD=XD+1
 
     cam=int
@@ -207,74 +206,93 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
     else:
         print("bateria ",pila,"%")
 
+
+    print("quieres ver las camaras? si(1) o no(2)")
+    cam=int(input())
+
+    if cam==1:
+        cam=1
+        pila=pila-1
+        print("cam system on")
+    
+    if cam==2:
+        cam=2
+        print("cam system off")
+     
+    if cam>2 or cam==0:
+        print("error, comando de camara denegado")
+        cam=int(input())
+
+  
+
     num=random.randint(1,20)
 
     if AI==num or AI>num:
-        mov=mov+1
+        mov1=mov1+1
     else:
         print("-FREDDY")
 
-    while mov1==1 and cam==2:
+    if mov1==1 and cam==2:
         print("-FREDDY")
         mov1=mov1+1
 
-    while mov1==1 and cam==1:
+    if mov1==1 and cam==1:
         print("-FREDDY esta en el esenario")
         mov1=mov1+1
 
-    while mov1==3 and cam==2:
+    if mov1==3 and cam==2:
         print("-FREDDY")
         mov1=mov1+1
 
-    while mov1==3 and cam==1:
+    if mov1==3 and cam==1:
         print("-FREDDY esta en el comedor")
         mov1=mov1+1
 
-    while mov1==5 and cam==2:
+    if mov1==5 and cam==2:
         print("-FREDDY")
         mov1=mov1+1
 
-    while mov1==5 and cam==1:
+    if mov1==5 and cam==1:
         print("-FREDDY esta en el baño")
         mov1=mov1+1    
 
-    while mov1==7 and cam==2:
+    if mov1==7 and cam==2:
         print("-FREDDY")
         mov1=mov1+1
 
-    while mov1==7 and cam==1:
+    if mov1==7 and cam==1:
         print("-FREDDY esta llendo a la cosina")
         mov1=mov1+1    
 
-    while mov1==9 and cam==2:
+    if mov1==9 and cam==2:
         print("-FREDDY")
         mov1=mov1+1
 
-    while mov1==9 and cam==1:
+    if mov1==9 and cam==1:
         print("-FREDDY esta en la cosina")
         mov1=mov1+1    
 
-    while mov1==11 and cam==2:
+    if mov1==11 and cam==2:
         print("-FREDDY")
         mov1=mov1+1
 
-    while mov1==11 and cam==1:
+    if mov1==11 and cam==1:
         print("-FREDDY esta llendo al pasillo")
         mov1=mov1+1    
 
-    while mov1==13 and cam==2:
+    if mov1==13 and cam==2:
         print("-FREDDY")
         mov1=mov1+1
 
-    while mov1==13 and cam==1:
+    if mov1==13 and cam==1:
         print("-FREDDY esta en pasillo")
         mov1=mov1+1    
 
-    while mov1==15 and cam==2:
+    if mov1==15 and cam==2:
         print("-FREDDY")
         mov1=mov1+1
 
-    while mov1==15 and cam==1:
+    if mov1==15 and cam==1:
         print("-FREDDY esta en la puerta")
         mov1=mov1+1    
 
@@ -286,59 +304,59 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
     else:
         print("-BONNIE")
 
-    while mov2==1 and cam==2:
+    if mov2==1 and cam==2:
         print("-BONNIE")
         mov2=mov2+1
 
-    while mov2==1 and cam==1:
+    if mov2==1 and cam==1:
         print("BONNIE esta en el esenario")
         mov2=mov2+1
 
-    while mov2==3 and cam==2:
+    if mov2==3 and cam==2:
         print("-BONNIE")
         mov2=mov2+1
 
-    while mov2==3 and cam==1:
+    if mov2==3 and cam==1:
         print("BONNIE esta en el comedor")
         mov2=mov2+1
 
-    while mov2==5 and cam==2:
+    if mov2==5 and cam==2:
         print("-BONNIE")
         mov2=mov2+1
 
-    while mov2==5 and cam==1:
+    if mov2==5 and cam==1:
         print("BONNIE esta en partes y servicios")
         mov2=mov2+1
 
-    while mov2==7 and cam==2:
+    if mov2==7 and cam==2:
         print("-BONNIE")
         mov2=mov2+1
 
-    while mov2==7 and cam==1:
+    if mov2==7 and cam==1:
         print("BONNIE esta llendo al pasillo")
         mov2=mov2+1
     
-    while mov2==9 and cam==2:
+    if mov2==9 and cam==2:
         print("-BONNIE")
         mov2=mov2+1
 
-    while mov2==9 and cam==1:
+    if mov2==9 and cam==1:
         print("BONNIE esta en el pasillo")
         mov2=mov2+1
 
-    while mov2==11 and cam==2:
+    if mov2==11 and cam==2:
         print("-BONNIE")
         mov2=mov2+1
 
-    while mov2==11 and cam==1:
+    if mov2==11 and cam==1:
         print("BONNIE esta en el closed de aseo")
         mov2=mov2+1
 
-    while mov2==13 and cam==2:
+    if mov2==13 and cam==2:
         print("-BONNIE")
         mov2=mov2+1
 
-    while mov2==13 and cam==1:
+    if mov2==13 and cam==1:
         print("BONNIE esta en la puerta")
         mov2=mov2+1
 
@@ -350,51 +368,51 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
     else:
         print("-CHICA")
 
-    while mov3==1 and cam==2:
+    if mov3==1 and cam==2:
         print("-CHICA")
         mov3=mov3+1
 
-    while mov3==1 and cam==1:
+    if mov3==1 and cam==1:
         print("CHICA esta en el esenario")
         mov3=mov3+1
 
-    while mov3==3 and cam==2:
+    if mov3==3 and cam==2:
         print("-CHICA")
         mov3=mov3+1
 
-    while mov3==3 and cam==1:
+    if mov3==3 and cam==1:
         print("CHICA esta en el comedor")
         mov3=mov3+1
 
-    while mov3==5 and cam==2:
+    if mov3==5 and cam==2:
         print("-CHICA")
         mov3=mov3+1
 
-    while mov3==5 and cam==1:
+    if mov3==5 and cam==1:
         print("CHICA esta en la cocina")
         mov3=mov3+1
 
-    while mov3==7 and cam==2:
+    if mov3==7 and cam==2:
         print("-CHICA")
         mov3=mov3+1
 
-    while mov3==7 and cam==1:
+    if mov3==7 and cam==1:
         print("CHICA esta caminando al pasillo")
         mov3=mov3+1
 
-    while mov3==9 and cam==2:
+    if mov3==9 and cam==2:
         print("-CHICA")
         mov3=mov3+1
 
-    while mov3==9 and cam==1:
+    if mov3==9 and cam==1:
         print("CHICA esta en el pasillo")
         mov3=mov3+1
 
-    while mov3==11 and cam==2:
+    if mov3==11 and cam==2:
         print("-CHICA")
         mov3=mov3+1
 
-    while mov3==11 and cam==1:
+    if mov3==11 and cam==1:
         print("CHICA esta en la puerta")
         mov3=mov3+1
 
@@ -406,109 +424,107 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
     else:
         print("-FOXY")
 
-    while mov4==1 and cam==2:
+    if mov4==1 and cam==2:
         print("-FOXY")
         mov4=mov4+1
 
-    while mov4==1 and cam==1:
+    if mov4==1 and cam==1:
         print("FOXY esta en la pirate cover")
         mov4=mov4+1
 
-    while mov4==3 and cam==2:
+    if mov4==3 and cam==2:
         print("-FOXY")
         mov4=mov4+1
 
-    while mov4==3 and cam==1:
+    if mov4==3 and cam==1:
         print("FOXY esta asomando por la cortina")
         mov4=mov4+1
 
-    while mov4==5 and cam==2:
+    if mov4==5 and cam==2:
         print("-FOXY")
         mov4=mov4+1
 
-    while mov4==5 and cam==1:
+    if mov4==5 and cam==1:
         print("FOXY esta saliendo de su cueva")
         mov4=mov4+1
 
-    while mov4==7 and cam==2:
+    if mov4==7 and cam==2:
         print("-FOXY")
         mov4=mov4+1
 
-    while mov4==7 and cam==1:
+    if mov4==7 and cam==1:
         print("FOXY esta fuera de su pirate cover")
         mov4=mov4+1
 
-    while mov4==9 and cam==2:
+    if mov4==9 and cam==2:
         print("-FOXY")
         mov4=mov4+1
 
-    while mov4==9 and cam==1:
+    if mov4==9 and cam==1:
         print("FOXY esta corriendo a la oficina")
         mov4=mov4+1
-
-    print("quieres ver las camaras? si(1) o no(2)")
-    cam=int(input())
-
-    if cam==1:
-        pila=pila-1
-        print("cam system on")
-    else:
-        print("cam system off")
-
-    while cam>2 or cam==0:
-        print("error, comando de camara denegado")
-        cam=int(input())
-
-    print("quieres cerrar(1) o abrir(2) la puerta?")
+    
+    
+    print("quieres cerrar las puertas si(1) o no(2)")
     puerta=int(input())
 
-    while puerta>2 or puerta==0:
+    if puerta==1:
+        puerta=1
+        pila=pila-1
+        print("puerta cerrada")
+    
+    if puerta==2:
+        puerta=2
+        print("puerta abierta")
+     
+    if puerta>2 or puerta==0:
         print("error, comando de puerta denegado")
         puerta=int(input())
 
-    if puerta==1:
-        pila=pila-1
-        print("puerta cerrada")
-    else:
-        puerta=2 
-        print("puerta abierta")
 
-    while mov1==16 and puerta==1:
+    if mov1==16 and puerta==1:
         mov1=1
         pila=pila-1
         print("-FREDDY vuelve al esenario")
 
-    while mov1==16 and puerta==2:
+    if mov1==16 and puerta==2:
         print("FREDDY a entrado a la oficina")
         mov1=17
+        break
+    
 
-    while mov2==14 and puerta==1:
+    if mov2==14 and puerta==1:
         mov2=1
         pila=pila-1
         print("-BONNIE vuelve al esenario")
 
-    while mov2==14 and puerta==2:
+    if mov2==14 and puerta==2:
         print("BONNIE a entrado a la oficina")
         mov2=15
+        break
+    
 
-    while mov3==12 and puerta==1:
+    if mov3==12 and puerta==1:
         mov3=1
         pila=pila-1
         print("-CHICA vuelve al esenario")
 
-    while mov3==12 and puerta==2:
+    if mov3==12 and puerta==2:
         print("CHICA a entrado a la oficina")
         mov3=13
+        break
+    
 
-    while mov4==10 and puerta==1:
+    if mov4==10 and puerta==1:
         mov4=1
         pila=pila-1
         print("-FOXY vuelve al pirate cover")
 
-    while mov4==10 and puerta==2:
+    if mov4==10 and puerta==2:
         print("FOXY a entrado a la oficina")
         mov4=11
         pila=pila-1
+        break
 
     golden=0
     golden2=0
@@ -517,7 +533,7 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
     golden=random.randint(1,50000)
     golden2=random.randint(1,50000)
 
-    while golden==golden2:
+    if golden==golden2:
         print('''
             "          0 0 0 0 0 0          "
 			"          0         0          "
@@ -538,8 +554,8 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
         golden=2
         golden2=1
         mov=9
+        break
 
-    
 
 if XD==60:
     print("6:00AM, Noche Completada!")
