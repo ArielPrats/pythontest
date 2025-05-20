@@ -160,8 +160,7 @@ while noche==70:
     pila=int(input())
     noche=0
 
-print("12:00AM")
-print (" ")
+
 
 XD=0
 mov1=0
@@ -169,32 +168,36 @@ mov2=0
 mov3=0
 mov4=0
 num=0
+spawn=1
 
 while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
     
-    if XD==1:
+    if XD>=1 and XD<=9:
         print("12:00 AM")
         XD=XD+1
 
-    if XD==10:
+    if XD>=10 and XD<=19:
         print("1:00 AM")
         XD=XD+1
 
-    if XD==20:
+    if XD>=19 and XD<=29:
         print("2:00 AM")
         XD=XD+1
 
-    if XD==30:
+    if XD>=30 and XD<=39:
         print("3:00 AM")
         XD=XD+1
 
-    if XD==40:
+    if XD>=40 and XD<=49:
         print("4:00AM")
         XD=XD+1
 
-    if XD==50:
+    if XD>=50 and XD<=59:
         print("5:00AM")
         XD=XD+1
+
+    if XD==60:
+        break
 
     XD=XD+1
 
@@ -278,7 +281,7 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
         mov1=mov1+1
 
     if mov1==11 and cam==1:
-        print("-FREDDY esta llendo al pasillo")
+        print("-FREDDY esta llendo al pasillo derecho")
         mov1=mov1+1    
 
     if mov1==13 and cam==2:
@@ -286,7 +289,7 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
         mov1=mov1+1
 
     if mov1==13 and cam==1:
-        print("-FREDDY esta en pasillo")
+        print("-FREDDY esta en pasillo derecho")
         mov1=mov1+1    
 
     if mov1==15 and cam==2:
@@ -294,7 +297,7 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
         mov1=mov1+1
 
     if mov1==15 and cam==1:
-        print("-FREDDY esta en la puerta")
+        print("-FREDDY esta en la puerta derecha")
         mov1=mov1+1    
 
 
@@ -334,7 +337,7 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
         mov2=mov2+1
 
     if mov2==7 and cam==1:
-        print("BONNIE esta llendo al pasillo")
+        print("BONNIE esta llendo al pasillo izquierdo")
         mov2=mov2+1
     
     if mov2==9 and cam==2:
@@ -342,7 +345,7 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
         mov2=mov2+1
 
     if mov2==9 and cam==1:
-        print("BONNIE esta en el pasillo")
+        print("BONNIE esta en el pasillo izquierdo")
         mov2=mov2+1
 
     if mov2==11 and cam==2:
@@ -358,7 +361,7 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
         mov2=mov2+1
 
     if mov2==13 and cam==1:
-        print("BONNIE esta en la puerta")
+        print("BONNIE esta en la puerta izquierda")
         mov2=mov2+1
 
    
@@ -398,7 +401,7 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
         mov3=mov3+1
 
     if mov3==7 and cam==1:
-        print("CHICA esta caminando al pasillo")
+        print("CHICA esta caminando al pasillo derecho")
         mov3=mov3+1
 
     if mov3==9 and cam==2:
@@ -406,7 +409,7 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
         mov3=mov3+1
 
     if mov3==9 and cam==1:
-        print("CHICA esta en el pasillo")
+        print("CHICA esta en el pasillo derecho")
         mov3=mov3+1
 
     if mov3==11 and cam==2:
@@ -414,118 +417,133 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
         mov3=mov3+1
 
     if mov3==11 and cam==1:
-        print("CHICA esta en la puerta")
+        print("CHICA esta en la puerta derecha")
         mov3=mov3+1
 
+    #arreglar a foxy: cuando ves las camaras no aparece devido al tema de numeros pares en su "mov"
+
+    num4=random.randint(1,20) 
+
+    if spawn==1:
+        print("-FOXY")
+        spawn=spawn+2
+
+    if cam==1:
+
+        if mov4==1 or mov4==2:
+            print("FOXY esta en la pirate cover")
+
+        if mov4==3 or mov4==4:
+            print("FOXY esta asomando por la cortina")
+
+        if mov4==5 or mov4==6:
+            print("FOXY esta saliendo de su cueva")
+
+        if mov4==7 or mov4==8:
+            print("FOXY esta asomando en el pasillo izquierdo")
+
+        if mov4==9:
+            print("FOXY esta corriendo a la oficina")
+            mov4=mov4+1
     
-    num4=random.randint(1,20)
-    
-    if AI4==num4 or AI4>num4:
-        mov4=mov4+1
-    else:
-        print("-FOXY")
+    if cam==2:
 
-    if mov4==1 and cam==2:
-        print("-FOXY")
-        mov4=mov4+1
+        if AI4==num4 or AI4>num4:
+            mov4=mov4+1
+        else:
+            print("-FOXY")
 
-    if mov4==1 and cam==1:
-        print("FOXY esta en la pirate cover")
-        mov4=mov4+1
+        if mov4==1:
+            print("-FOXY")
+            mov4=mov4+1
 
-    if mov4==3 and cam==2:
-        print("-FOXY")
-        mov4=mov4+1
+        if mov4==3:
+            print("-FOXY")
+            mov4=mov4+1        
 
-    if mov4==3 and cam==1:
-        print("FOXY esta asomando por la cortina")
-        mov4=mov4+1
+        if mov4==5:
+            print("-FOXY")
+            mov4=mov4+1
 
-    if mov4==5 and cam==2:
-        print("-FOXY")
-        mov4=mov4+1
+        if mov4==7:
+            print("-FOXY")
+            mov4=mov4+1
 
-    if mov4==5 and cam==1:
-        print("FOXY esta saliendo de su cueva")
-        mov4=mov4+1
+        if mov4==9:
+            print("-FOXY")
+            mov4=mov4+1
 
-    if mov4==7 and cam==2:
-        print("-FOXY")
-        mov4=mov4+1
 
-    if mov4==7 and cam==1:
-        print("FOXY esta fuera de su pirate cover")
-        mov4=mov4+1
 
-    if mov4==9 and cam==2:
-        print("-FOXY")
-        mov4=mov4+1
-
-    if mov4==9 and cam==1:
-        print("FOXY esta corriendo a la oficina")
-        mov4=mov4+1
-    
-    
-    print("quieres cerrar las puertas si(1) o no(2)")
+    print("cerrar puerta izquierda(1), puerta derecha(2)")
+    print("cerrar ambas(3), no cerrar ninguna(4)")
     puerta=int(input())
 
     if puerta==1:
         puerta=1
         pila=pila-1
-        print("puerta cerrada")
-    
+        print("puerta izquierda cerrada")
+
     if puerta==2:
         puerta=2
-        print("puerta abierta")
+        pila=pila-1
+        print("puerta derecha cerrada")
+    
+    if puerta==3:
+        puerta=3
+        pila=pila-2
+        print("ambas puertas cerradas")
+
+    if puerta==4:
+        puerta=4
+        print("puertas abiertas")
+
      
-    if puerta>2 or puerta==0:
+    if puerta>4 or puerta<1:
         print("error, comando de puerta denegado")
         puerta=int(input())
 
 
-    if mov1==16 and puerta==1:
+    if mov1==16 and puerta==2 or mov1==16 and puerta==3:
         mov1=1
-        pila=pila-1
         print("-FREDDY vuelve al esenario")
 
-    if mov1==16 and puerta==2:
+    if mov1==16 and puerta==1 or mov1==16 and puerta==4:
         print("FREDDY a entrado a la oficina")
         mov1=17
         break
     
 
-    if mov2==14 and puerta==1:
+    if mov2==14 and puerta==1 or mov2==14 and puerta==3:
         mov2=1
-        pila=pila-1
         print("-BONNIE vuelve al esenario")
 
-    if mov2==14 and puerta==2:
+    if mov2==14 and puerta==2 or mov2==14 and puerta==4:
         print("BONNIE a entrado a la oficina")
         mov2=15
         break
     
 
-    if mov3==12 and puerta==1:
+    if mov3==12 and puerta==2 or mov3==12 and puerta==3:
         mov3=1
-        pila=pila-1
         print("-CHICA vuelve al esenario")
 
-    if mov3==12 and puerta==2:
+    if mov3==12 and puerta==1 or mov3==12 and puerta==4:
         print("CHICA a entrado a la oficina")
         mov3=13
         break
     
 
-    if mov4==10 and puerta==1:
+    if mov4==10 and puerta==1 or mov4==10 and puerta==3:
         mov4=1
-        pila=pila-1
+        pila=pila-5
         print("-FOXY vuelve al pirate cover")
 
-    if mov4==10 and puerta==2:
+    if mov4==10 and puerta==2 or mov4==10 and puerta==4:
         print("FOXY a entrado a la oficina")
         mov4=11
-        pila=pila-1
         break
+    
 
     golden=0
     golden2=0
