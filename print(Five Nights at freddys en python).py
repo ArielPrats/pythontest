@@ -162,7 +162,7 @@ while noche==70:
 
 
 
-XD=0
+XD=1
 mov1=0
 mov2=0
 mov3=0
@@ -170,36 +170,36 @@ mov4=0
 num=0
 spawn=1
 
-while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
+
+while XD!=90 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
     
-    if XD>=1 and XD<=9:
+    if XD>=1 and XD<=15:
         print("12:00 AM")
         XD=XD+1
 
-    if XD>=10 and XD<=19:
+    if XD>=15 and XD<=30:
         print("1:00 AM")
         XD=XD+1
 
-    if XD>=19 and XD<=29:
+    if XD>=30 and XD<=45:
         print("2:00 AM")
         XD=XD+1
 
-    if XD>=30 and XD<=39:
+    if XD>=45 and XD<=60:
         print("3:00 AM")
         XD=XD+1
 
-    if XD>=40 and XD<=49:
+    if XD>=60 and XD<=75:
         print("4:00AM")
         XD=XD+1
 
-    if XD>=50 and XD<=59:
+    if XD>=75 and XD<=90:
         print("5:00AM")
         XD=XD+1
 
-    if XD==60:
+    if XD==90:
         break
 
-    XD=XD+1
 
     cam=int
 
@@ -569,15 +569,17 @@ while XD!=60 or mov1!=17 or mov2!=15 or mov3!=13 or mov4!=11:
 			"    0   0 0 0 0 0 0 0 0   0    " 
 			"    0 =================== 0    " 
 			"    0 =================== 0    " 
-			"      0 0 0 0 0 0 0 0 0 0      " ''')
+			"      0 0 0 0 0 0 0 0 0 0      " 
+            ''')
         golden=2
         golden2=1
         mov=9
         break
 
 
-if XD==60:
+if XD==90:
     print("6:00AM, Noche Completada!")
+    print(" ")
 else:
     print("GAME OVER")
     print("turnos sobrevividos")
