@@ -5,7 +5,7 @@ print ('''
 ("vercion 0.1")
 (" ")
 ("creado por Ariel Prats")
-("fnaf creafo por scott cowthon")
+("fnaf creado por scott cowthon")
 (" ")
 ("ingrese su codigo de empleado:)'
 ''')
