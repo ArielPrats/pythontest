@@ -10,8 +10,6 @@ AIPFD=0
 AIPFY=0
 AIBB=0
 vidaaudio=10
-vidacam=10
-vidavent=10
 errorAD=0
 errorCAM=0
 errorVENT=0
@@ -30,12 +28,12 @@ print("Elija su noche")
 
 
 print('''
--noche(1)
--noche(2)
--noche(3)
--noche(4)
--noche(5)
--noche(6)
+-noche(1) "a new job"
+-noche(2) "a new terror"
+-noche(3) "hallucinations"
+-noche(4) "follow the yellow bunny"
+-noche(5) "the last fright"
+-noche(6) "i hope you die in a fire"
 ''')
 
 noche=int(input())
@@ -43,6 +41,39 @@ noche=int(input())
 while noche>7:
     print("error,no se reconoce noche")
     noche=(input())
+
+if noche==1:
+    vidacam=10
+elif noche==2:
+    vidacam=8
+elif noche==3:
+    vidacam=7
+elif noche==4:
+    vidacam=6
+elif noche==5 or noche==6:
+    vidacam=4
+
+if noche==1:
+    vidavent=80
+elif noche==2:
+    vidavent=40
+elif noche==3:
+    vidavent=35
+elif noche==4:
+    vidavent=30
+elif noche==5 or noche==6:
+    vidavent=25
+
+if noche==1:
+    vidaaudio=10
+elif noche==2:
+    vidaaudio=6
+elif noche==3:
+    vidaaudio=5
+elif noche==4:
+    vidaaudio=4
+elif noche==5 or noche==6:
+    vidaaudio=3
 
 
 pila=int 
@@ -113,7 +144,7 @@ while noche==40:
 
 while noche==50:
     print("-noche 5")
-    print("THE LAST FIGHT!")
+    print("THE LAST FRIGHT!")
     noche=0
 
 while noche==60:
@@ -173,11 +204,11 @@ while hola!=1:
     cam=int(input())
 
     if vidacam>1:
-        if cam==1:
+        if cam==1 and noche==1:
             cam=1
             print("cam system on")
-            vidacam=vidacam-random.randint(1,3)
-            #aqui modificar la vida dependiendo de la noche 
+            vidacam=vidacam-1
+            #aqui modificar la vida dependiendo de la noche
 
         if cam==3:
             cam=3
@@ -190,27 +221,22 @@ while hola!=1:
         print("CAMERA ERROR")
         errorCAM=1
 
-
-    if vidaaudio>1 and cam==1:
-        print("quieres usar el audio? si(1), no(2)")
-        audio=int(input())
-
-        if audio==1:
-            mov=mov-random.randint(1,3)
-            print("el audio a sonado")
-            vidaaudio=vidaaudio-random.randint(1,3)
-            #aqui modificar la vida dependiendo de la noche 
-
-        if audio==2:
-            print("audio no usado")
-            
-        if audio>2 or audio==0:
-            print("error, comando de audio denegado")
+    if cam==1:
+        if vidaaudio>1:
+            print("quieres usar el audio? si(1), no(2)")
             audio=int(input())
-    elif vidaaudio<1:
-        print("ERROR AUDIO") 
-        errorAD=1
-
+            if audio==1:
+                mov=mov-random.randint(1,3)
+                print("el audio a sonado")
+                vidaaudio=vidaaudio-1
+            elif audio==2:
+                print("audio no usado")
+            elif audio>2 or audio==0:
+                print("error, comando de audio denegado")
+                audio=int(input())
+        else:
+            print("ERROR AUDIO") 
+            errorAD=1
 
     if vidavent>1 and cam==1:
         print("cerrar ventilaion? si(1) no(2)")
@@ -229,10 +255,9 @@ while hola!=1:
         if vent>2 or vent==0:
             print("error, comando de ventilacion denegado")
             vent=int(input())
-    elif vidavent<1:
+    else:
         print("ERROR VENTILACION") 
         errorVENT=1
-
 
     #PANEL REPARACIONES 
     if cam==2:
@@ -242,41 +267,56 @@ while hola!=1:
         print("-audio(3)",errorAD)
         panel=int(input())
 
+        if panel==1:
+            print("se esta reparando la ventilacion, espere...")
+            errorVENT=0
+            print("se a reparado la ventilacion")
+            if noche==1:
+                vidavent=80
+            elif noche==2:
+                vidavent=40
+            elif noche==3:
+                vidavent=35
+            elif noche==4:
+                vidavent=30
+            elif noche==5 or noche==6:
+                vidavent=25
+            rep1=0
+            panel=0
 
-    if panel==3:
-        print("se esta reparando la ventilacion, espere...")
-        rep1=rep1+1
+        elif panel==2:
+            print("se esta reparando la camara, espere...")
+            errorCAM=0
+            print("se a reparado la camara")
+            if noche==1:
+                vidacam=10
+            elif noche==2:
+                vidacam=8
+            elif noche==3:
+                vidacam=7
+            elif noche==4:
+                vidacam=6
+            elif noche==5 or noche==6:
+                vidacam=4
+            rep2=0
+            panel=0
 
-    if rep1==3:
-        errorVENT=0
-        print("se a reparado la ventilacion")
-        vidavent=10
-        rep1=0
-        panel=0
-
-    if panel==2:
-        print("se esta reparando la camara, espere...")
-        rep2=rep2+1
-
-    if rep2==3:
-        errorCAM=0
-        print("se a repadado la camara")
-        vidacam=10
-        rep2=0
-        panel=0
-
-
-    if panel==3:
-        print("se esta reparando el audio, espere...")
-        rep3=rep3+1
-
-    if rep3==3:
-        errorAD=0
-        print("se a repadado el audio")
-        vidaaudio=10
-        rep3=0
-        panel=0
-
+        elif panel==3:
+            print("se esta reparando el audio, espere...")
+            errorAD=0
+            print("se a reparado el audio")
+            if noche==1:
+                vidaaudio=10
+            elif noche==2:
+                vidaaudio=6
+            elif noche==3:
+                vidaaudio=5
+            elif noche==4:
+                vidaaudio=4
+            elif noche==5 or noche==6:
+                vidaaudio=3
+            rep3=0
+            panel=0
 
     #SISTEMA DE MOVIMINETO
 
